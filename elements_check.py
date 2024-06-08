@@ -59,7 +59,7 @@ def analyze_bazi_chart(year, month, day, hour, minute):
         # Define the five elements and their corresponding branches
         five_elements = {
             "Metal": ["申", "酉"], "Water": ["子", "亥"], "Wood": ["寅", "卯"],
-            "Fire": ["巳", "午"], "Earth": ["辰", "丑", "戌", "未"]
+            "Fire": ["巳", "午"], "Earth": ["辰", "丑", "戌", "未"] # All four Earth symbols included
         }
 
         # Initialize counters for each element
@@ -105,5 +105,9 @@ def analyze_bazi_chart(year, month, day, hour, minute):
     for element, count in element_counts.items():
         print(f"     {element}: {count}")
 
+    return bazi_chart, bazi_ziwuxing, total_elements_present
+
 # Example usage
-analyze_bazi_chart(1998, 9, 14, 1, 0)
+chart, ziwuxing, elements = analyze_bazi_chart(1998, 9, 14, 1, 0)
+print("chinese chart:", chart)
+print("chinese ziwuxing", ziwuxing)
